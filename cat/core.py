@@ -1,5 +1,3 @@
-
-
 from cat.requestor import Requestor
 
 
