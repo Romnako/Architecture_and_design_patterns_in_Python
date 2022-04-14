@@ -10,6 +10,7 @@
                     <a href="/courses?id={{ category.id }}">Посмотреть курсы</a>
                 </div>
                 <span class="badge bg-primary rounded-pill" title="Количество курсов">{{ category.courses_count() }}</span>
+                <a href="/categories/delete/?id={{ category.id }}" type="button" class="btn btn-danger float-end ms-3">Удалить</a>
             </li>
         {% endfor %}
     </ul>

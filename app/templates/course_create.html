@@ -2,7 +2,8 @@
 {% block content %}
     <h1>Создание курса для категории «{{ category.name }}»</h1>
     <div class="col-3">
-        <form method="POST" action="/courses/create?id={{ category.id }}">
+        <form method="POST" action="{% if course is defined %}/courses/edit{% else %}/courses/create?id={{ category.id }}{% endif %}">
+            {% if course is defined %}<input type="hidden" name="id" value="{{ course.id }}">{% endif %}
             <div class="mb-3">
                 <label for="formName" class="form-label">Название курса</label>
                 <input type="text" placeholder="Архитектура и шаблоны проектирования на Python" name="name" required class="form-control" id="formName">

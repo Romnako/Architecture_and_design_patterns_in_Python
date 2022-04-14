@@ -1,2 +1,2 @@
-from .core import Cat
+from .core import Cat, DebugCat, FakeCat
 from .templator import render
